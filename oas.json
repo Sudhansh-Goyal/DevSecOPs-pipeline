@@ -1,0 +1,125 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Solar System API",
+      "version": "1.0"
+    },
+    "paths": {
+      "/": {
+        "get": {
+          "responses": {
+            "200": {
+              "description": "",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "example": "Example",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/live": {
+        "get": {
+          "responses": {
+            "200": {
+              "description": "",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "example": "Live",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/os": {
+        "get": {
+          "responses": {
+            "200": {
+              "description": "",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "example": {
+                      "strict": true,
+                      "value": {
+                        "os": "f7ed9952e2ed"
+                      }
+                    },
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/planet": {
+        "post": {
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": {
+                    "strict": true,
+                    "value": {
+                      "id": "3"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "example": {
+                      "strict": true,
+                      "value": {
+                        "_id": "64de122465ba6ca132e2d046",
+                        "id": 3,
+                        "name": "Earth",
+                        "image": "https://gitlab.com/sidd-harth/solar-system/-/raw/main/images/earth.png",
+                        "velocity": "29",
+                        "distance": "149",
+                        "description": "Earth is the third planet from the Sun and is the largest of the terrestrial planets. The Earth is the only planet in our solar system not to be named after a Greek or Roman deity. The Earth was formed approximately 4.54 billion years ago and is the only known planet to support life. Earth has one Moon, the largest moon of any rocky planet in the Solar System. Earth also has more than 20 known co-orbitals, including the asteroids 3753 Cruithne and 469219 Kamoʻoalewa, and the occasional temporary satellite, like 2020 CD3; however, since they do not permanently orbit Earth, they are not considered moons. "
+                      }
+                    },
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/ready": {
+        "get": {
+          "responses": {
+            "200": {
+              "description": "",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "example": "Ready",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
